@@ -2,7 +2,7 @@ function CourseCard({ icon, tag, title, description, outcomes, accent }) {
     return (
         <div className="course-card" style={{ "--accent": accent }}>
             <div className="card-icon">{icon}</div>
-            <div className="card-tag">{tag}</div>
+            {/* <div className="card-tag">{tag}</div> */}
             <h3 className="card-title">{title}</h3>
             <p className="card-desc">{description}</p>
             <ul className="card-outcomes">

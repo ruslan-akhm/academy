@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "../lib/supabase";
 
 export default function EnrolSection() {
     const [formState, setFormState] = useState({
@@ -7,11 +8,35 @@ export default function EnrolSection() {
         childAge: "",
         classFormat: "",
         submitted: false,
+        error: null,
+        loading: false,
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setFormState((s) => ({ ...s, submitted: true }));
+        setFormState((s) => ({ ...s, loading: true, error: null }));
+
+        const utmCampaign = new URLSearchParams(window.location.search).get(
+            "utm_campaign"
+        );
+
+        const { error } = await supabase.from("academy_enrollment").insert({
+            name: formState.name,
+            email: formState.email,
+            age: formState.childAge,
+            format: formState.classFormat || null,
+            ...(utmCampaign ? { utm_campaign: utmCampaign } : {}),
+        });
+
+        if (error) {
+            setFormState((s) => ({
+                ...s,
+                loading: false,
+                error: "Something went wrong. Please try again.",
+            }));
+        } else {
+            setFormState((s) => ({ ...s, loading: false, submitted: true }));
+        }
     };
 
     return (
@@ -47,11 +72,7 @@ export default function EnrolSection() {
                         <div className="form-success">
                             <div className="success-icon">🎉</div>
                             <h3>You're on the list!</h3>
-                            <p>
-                                We'll be in touch within 24 hours with full
-                                details about cohort 1. Your child's spot is
-                                reserved.
-                            </p>
+                            <p>We'll be in touch with details soon.</p>
                         </div>
                     ) : (
                         <form className="enrol-form" onSubmit={handleSubmit}>
@@ -106,7 +127,7 @@ export default function EnrolSection() {
                                 </select>
                             </div>
                             <div className="form-field">
-                                <label>Preferred class (optional)</label>
+                                <label>Preferred class format (optional)</label>
                                 <select
                                     value={formState.classFormat}
                                     onChange={(e) =>
@@ -121,9 +142,18 @@ export default function EnrolSection() {
                                     <option value="online">Online</option>
                                 </select>
                             </div>
-                            <button type="submit" className="btn-primary full">
-                                Reserve my child's spot →
+                            <button
+                                type="submit"
+                                className="btn-primary full"
+                                disabled={formState.loading}
+                            >
+                                {formState.loading
+                                    ? "Submitting…"
+                                    : "Reserve my child's spot →"}
                             </button>
+                            {formState.error && (
+                                <p className="form-error">{formState.error}</p>
+                            )}
                             <p className="form-note">
                                 No payment needed. We'll send full details
                                 before asking for anything.

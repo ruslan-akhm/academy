@@ -89,7 +89,7 @@ export default function HeroSection() {
                 <div className="hero-text">
                     <div className="hero-eyebrow">
                         <span className="eyebrow-dot" />
-                        Now enrolling · Cohort starting September 2025
+                        Enrolment open now — limited spots
                     </div>
                     <h1 className="hero-h1">
                         Give your child a<br />
@@ -99,9 +99,9 @@ export default function HeroSection() {
                     </h1>
                     <p className="hero-sub">
                         LaunchPad Academy is a Toronto-based tech academy that
-                        teaches 10–14 year olds how to think like engineers,
-                        work with AI, and build real products — before most of
-                        their peers even know these tools exist.
+                        teaches early adolescents (10–14 year olds) how to think
+                        like engineers, work with AI, and build real products —
+                        before most of their peers even know these tools exist.
                     </p>
                     <div className="hero-actions">
                         <a href="#enrol" className="btn-primary">

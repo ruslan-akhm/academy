@@ -1,21 +1,5 @@
 import { useState } from "react";
 
-function FaqItem({ q, a }) {
-    const [open, setOpen] = useState(false);
-    return (
-        <div
-            className={"faq-item" + (open ? " open" : "")}
-            onClick={() => setOpen((o) => !o)}
-        >
-            <div className="faq-q">
-                <span>{q}</span>
-                <span className="faq-arrow">{open ? "−" : "+"}</span>
-            </div>
-            {open && <div className="faq-a">{a}</div>}
-        </div>
-    );
-}
-
 const FAQS = [
     {
         q: "Does my child need any prior coding experience?",
@@ -39,7 +23,25 @@ const FAQS = [
     },
 ];
 
+function FaqItem({ q, a }) {
+    const [open, setOpen] = useState(false);
+    return (
+        <div
+            className={"faq-item" + (open ? " open" : "")}
+            onClick={() => setOpen((o) => !o)}
+        >
+            <div className="faq-q">
+                <span>{q}</span>
+                <span className="faq-arrow">{open ? "−" : "+"}</span>
+            </div>
+            {open && <div className="faq-a">{a}</div>}
+        </div>
+    );
+}
+
 export default function FaqSection() {
+    const [selected, setSelected] = useState(0);
+
     return (
         <section className="faq-section" id="faq">
             <div className="section-inner faq-inner">
@@ -49,7 +51,34 @@ export default function FaqSection() {
                     <br />
                     <span className="cyan">need to know</span>
                 </h2>
-                <div className="faq-list">
+
+                {/* Desktop: split panel */}
+                <div className="faq-desktop">
+                    <div className="faq-questions">
+                        {FAQS.map((f, i) => (
+                            <button
+                                key={i}
+                                className={
+                                    "faq-question-btn" +
+                                    (selected === i ? " active" : "")
+                                }
+                                onClick={() => setSelected(i)}
+                            >
+                                <span>{f.q}</span>
+                                <span className="faq-chevron">
+                                    {selected === i ? "→" : "›"}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                    <div className="faq-answer-panel">
+                        <p className="faq-answer-q">{FAQS[selected].q}</p>
+                        <p className="faq-answer-a">{FAQS[selected].a}</p>
+                    </div>
+                </div>
+
+                {/* Mobile: accordion */}
+                <div className="faq-mobile">
                     {FAQS.map((f, i) => (
                         <FaqItem key={i} {...f} />
                     ))}
