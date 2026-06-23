@@ -5,7 +5,7 @@ export default function Footer() {
                 <div className="logo">
                     <span className="logo-icon">⚡</span>
                     <span className="logo-text">
-                        Main Branch<span className="logo-accent">Academy</span>
+                        Main Branch <span className="logo-accent">Academy</span>
                     </span>
                 </div>
                 <p className="footer-tagline">
