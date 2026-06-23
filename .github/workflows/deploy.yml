@@ -30,3 +30,4 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./dist # Vite outputs to dist
                   cname: mainbranchacademy.ca # Your custom domain
+                  force_orphan: true
