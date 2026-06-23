@@ -54,7 +54,7 @@ function Terminal() {
                 <span className="dot red" />
                 <span className="dot yellow" />
                 <span className="dot green" />
-                <span className="terminal-title">launchpad_academy.sh</span>
+                <span className="terminal-title">mainbranch_academy.sh</span>
             </div>
             <div className="terminal-body">
                 {lines.map(
@@ -98,7 +98,7 @@ export default function HeroSection() {
                         in tech.
                     </h1>
                     <p className="hero-sub">
-                        LaunchPad Academy is a Toronto-based tech academy that
+                        Main Branch Academy is a Toronto-based tech academy that
                         teaches early adolescents (10–14 year olds) how to think
                         like engineers, work with AI, and build real products —
                         before most of their peers even know these tools exist.

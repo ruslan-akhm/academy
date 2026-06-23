@@ -13,7 +13,7 @@ export default function Nav() {
                 <div className="logo">
                     <span className="logo-icon">⚡</span>
                     <span className="logo-text">
-                        LaunchPad<span className="logo-accent">Academy</span>
+                        Main Branch<span className="logo-accent">Academy</span>
                     </span>
                 </div>
                 <div className="nav-links">
