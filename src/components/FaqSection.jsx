@@ -40,7 +40,7 @@ function FaqItem({ q, a }) {
 }
 
 export default function FaqSection() {
-    const [selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState(0); //
 
     return (
         <section className="faq-section" id="faq">
