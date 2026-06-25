@@ -1,53 +1,16 @@
-import { useState, useEffect } from "react";
-
 const TERMINAL_LINES = [
-    { prompt: "$ ", text: "What will your child build today?", delay: 60 },
-    { prompt: "> ", text: "AI agents that solve real problems...", delay: 50 },
-    { prompt: "> ", text: "Their own working app in 60 minutes...", delay: 50 },
-    { prompt: "> ", text: "The confidence to say: I made this.", delay: 60 },
+    { prompt: "$ ", text: "What will your child build today?" },
+    { prompt: "> ", text: "AI agents that solve real problems..." },
+    { prompt: "> ", text: "Their own working app in 60 minutes..." },
+    { prompt: "> ", text: "The confidence to say: I made this." },
     {
         prompt: "✓ ",
         text: "Enrolment now open — cohort starts September 2026",
-        delay: 40,
         highlight: true,
     },
 ];
 
 function Terminal() {
-    const [lines, setLines] = useState([]);
-    const [currentLine, setCurrentLine] = useState(0);
-    const [currentChar, setCurrentChar] = useState(0);
-    const [done, setDone] = useState(false);
-
-    useEffect(() => {
-        if (done) return;
-        if (currentLine >= TERMINAL_LINES.length) {
-            setDone(true);
-            return;
-        }
-        const line = TERMINAL_LINES[currentLine];
-        if (currentChar <= line.text.length) {
-            const t = setTimeout(() => {
-                setLines((prev) => {
-                    const next = [...prev];
-                    next[currentLine] = {
-                        ...line,
-                        typed: line.text.slice(0, currentChar),
-                    };
-                    return next;
-                });
-                setCurrentChar((c) => c + 1);
-            }, line.delay);
-            return () => clearTimeout(t);
-        } else {
-            const t = setTimeout(() => {
-                setCurrentLine((l) => l + 1);
-                setCurrentChar(0);
-            }, 420);
-            return () => clearTimeout(t);
-        }
-    }, [currentLine, currentChar, done]);
-
     return (
         <div className="terminal">
             <div className="terminal-bar">
@@ -57,24 +20,16 @@ function Terminal() {
                 <span className="terminal-title">mainbranch_academy.sh</span>
             </div>
             <div className="terminal-body">
-                {lines.map(
-                    (l, i) =>
-                        l && (
-                            <div
-                                key={i}
-                                className={
-                                    "terminal-line" + (l.highlight ? " hl" : "")
-                                }
-                            >
-                                <span className="prompt">{l.prompt}</span>
-                                <span>{l.typed}</span>
-                                {i === currentLine && !done && (
-                                    <span className="cursor">▋</span>
-                                )}
-                            </div>
-                        )
-                )}
-                {done && <span className="cursor blink">▋</span>}
+                {TERMINAL_LINES.map((l, i) => (
+                    <div
+                        key={i}
+                        className={"terminal-line" + (l.highlight ? " hl" : "")}
+                    >
+                        <span className="prompt">{l.prompt}</span>
+                        <span>{l.text}</span>
+                    </div>
+                ))}
+                <span className="cursor blink">▋</span>
             </div>
         </div>
     );

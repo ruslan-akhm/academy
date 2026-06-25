@@ -38,7 +38,8 @@ function FaqItem({ q, a }) {
         </div>
     );
 }
-
+//Change text "Cohort 1" to white color, instead of "Cohort 1 has"
+//
 export default function FaqSection() {
     const [selected, setSelected] = useState(0); //
 
@@ -49,7 +50,7 @@ export default function FaqSection() {
                 <h2 className="section-h2">
                     Everything you
                     <br />
-                    <span className="cyan">need to know</span>
+                    <span className="amber">need to know.</span>
                 </h2>
 
                 {/* Desktop: split panel */}

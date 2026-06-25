@@ -29,7 +29,7 @@ export default function WhySection() {
                 <h2 className="section-h2">
                     The kids who learn this now
                     <br />
-                    <span className="cyan">
+                    <span className="amber">
                         will be the ones building the future.
                     </span>
                 </h2>

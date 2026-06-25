@@ -5,6 +5,7 @@ import StatsStrip from "./components/StatsStrip";
 import WhySection from "./components/WhySection";
 import CoursesSection from "./components/CoursesSection";
 import HowSection from "./components/HowSection";
+import TeacherSection from "./components/TeacherSection";
 import FaqSection from "./components/FaqSection";
 import EnrolSection from "./components/EnrolSection";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ export default function App() {
             <WhySection />
             <CoursesSection />
             <HowSection />
+            <TeacherSection />
             <FaqSection />
             <EnrolSection />
             <Footer />

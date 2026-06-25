@@ -35,7 +35,7 @@ function Counter({ to, suffix }) {
 const STATS = [
     { n: 10, suffix: " students", label: "Max cohort size" },
     { n: 90, suffix: " min", label: "Session time" },
-    { n: 0, suffix: " required", label: "Coding experience" },
+    { n: 12, suffix: " sessions", label: "One term" },
 ];
 
 export default function StatsStrip() {

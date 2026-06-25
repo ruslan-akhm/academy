@@ -126,7 +126,7 @@ export default function EnrolSection() {
                                     ))}
                                 </select>
                             </div>
-                            <div className="form-field">
+                            {/* <div className="form-field">
                                 <label>Preferred class format (optional)</label>
                                 <select
                                     value={formState.classFormat}
@@ -141,7 +141,7 @@ export default function EnrolSection() {
                                     <option value="in-person">In person</option>
                                     <option value="online">Online</option>
                                 </select>
-                            </div>
+                            </div> */}
                             <button
                                 type="submit"
                                 className="btn-primary full"
