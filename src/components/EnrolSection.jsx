@@ -51,7 +51,7 @@ export default function EnrolSection() {
                         <span className="amber">limited seats.</span>
                     </h2>
                     <p className="enrol-sub">
-                        We're keeping the first cohort intentionally small — 10
+                        We're keeping the cohort intentionally small — 10
                         students max — so every child gets the attention they
                         deserve. Drop your details and we'll get in touch.
                     </p>

@@ -7,7 +7,7 @@ const TERMINAL_LINES = [
     { prompt: "> ", text: "The confidence to say: I made this.", delay: 60 },
     {
         prompt: "✓ ",
-        text: "Enrolment now open — cohort starts July 2025",
+        text: "Enrolment now open — cohort starts September 2026",
         delay: 40,
         highlight: true,
     },
