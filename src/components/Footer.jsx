@@ -12,7 +12,7 @@ export default function Footer() {
                     Teaching the next generation to build.
                 </p>
                 <p className="footer-copy">
-                    © 2025 Main Branch Academy. All rights reserved.
+                    © 2026 Main Branch Academy. All rights reserved.
                 </p>
             </div>
         </footer>
