@@ -1,29 +1,41 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
-  --navy: #0A0F2C;
-  --navy-mid: #131a3d;
-  --navy-light: #1e2a52;
-  --cyan: #00E5FF;
-  --cyan-dim: rgba(0,229,255,0.12);
-  --amber: #FFB830;
-  --amber-dim: rgba(255,184,48,0.12);
-  --white: #F0F4FF;
-  --muted: rgba(240,244,255,0.55);
-  --card-bg: rgba(255,255,255,0.04);
-  --card-border: rgba(0,229,255,0.15);
+    --navy: #0a0f2c;
+    --navy-mid: #131a3d;
+    --navy-light: #1e2a52;
+    --cyan: #00e5ff;
+    --cyan-dim: rgba(0, 229, 255, 0.12);
+    --amber: #ffb830;
+    --amber-dim: rgba(255, 184, 48, 0.12);
+    --white: #f4f7ff;
+    --muted: rgba(240, 244, 255, 0.8);
+    --card-bg: rgba(255, 255, 255, 0.04);
+    --card-border: rgba(0, 229, 255, 0.15);
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--navy);
-  color: var(--white);
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .display {
-  font-family: 'Space Grotesk', sans-serif;
+h1,
+h2,
+h3,
+h4,
+.display {
+    font-family: "Space Grotesk", sans-serif;
 }

@@ -119,29 +119,21 @@ export default function EnrolSection() {
                                     }
                                 >
                                     <option value="">Select age</option>
-                                    {[10, 11, 12, 13, 14].map((a) => (
+                                    {[
+                                        "Under 10",
+                                        "10",
+                                        "11",
+                                        "12",
+                                        "13",
+                                        "14",
+                                        "Over 14",
+                                    ].map((a) => (
                                         <option key={a} value={a}>
                                             {a} years old
                                         </option>
                                     ))}
                                 </select>
                             </div>
-                            {/* <div className="form-field">
-                                <label>Preferred class format (optional)</label>
-                                <select
-                                    value={formState.classFormat}
-                                    onChange={(e) =>
-                                        setFormState((s) => ({
-                                            ...s,
-                                            classFormat: e.target.value,
-                                        }))
-                                    }
-                                >
-                                    <option value="">No preference</option>
-                                    <option value="in-person">In person</option>
-                                    <option value="online">Online</option>
-                                </select>
-                            </div> */}
                             <button
                                 type="submit"
                                 className="btn-primary full"
