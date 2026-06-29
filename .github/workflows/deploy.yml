@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
     push:
         branches:
-            - master # Triggers on every push to master
+            - new-design # Triggers on every push
 
 permissions:
     contents: read
