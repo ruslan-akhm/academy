@@ -7,7 +7,7 @@ const STEPS = [
     {
         n: 2,
         title: "Learn from a real software engineer",
-        body: "Every session is taught directly by an experienced software engineer — not a teaching assistant or a script. Hands-on, project-driven, 90-minute group session.",
+        body: "Every session is taught directly by an experienced software engineer — not a teaching assistant or a script. Hands-on, project-driven, 90-minute group sessions.",
     },
     {
         n: 3,

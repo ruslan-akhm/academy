@@ -7,7 +7,7 @@ const FAQS = [
     },
     {
         q: "What age range is this designed for?",
-        a: "For now we focus on ages 10–14. Young enough that these habits shape how they think; old enough to engage seriously with real tools. We group kids thoughtfully to keep sessions engaging for everyone. \n However, if your child is outside this range but you think they'd thrive, sign them up below and we'll see if we can make it work.",
+        a: "For now we focus on ages 10–14. Young enough that these habits shape how they think; old enough to engage seriously with real tools. We group kids thoughtfully to keep sessions engaging for everyone. \n\n However, if your child is outside this range but you think they'd thrive, sign them up below and we'll see if we can make it work.",
     },
     {
         q: "How are classes structured?",
@@ -34,7 +34,13 @@ function FaqItem({ q, a }) {
                 <span>{q}</span>
                 <span className="faq-arrow">{open ? "−" : "+"}</span>
             </div>
-            {open && <div className="faq-a">{a}</div>}
+            {open && (
+                <div className="faq-a">
+                    {a.split("\n\n").map((para, i) => (
+                        <p key={i}>{para}</p>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
@@ -74,7 +80,11 @@ export default function FaqSection() {
                     </div>
                     <div className="faq-answer-panel">
                         <p className="faq-answer-q">{FAQS[selected].q}</p>
-                        <p className="faq-answer-a">{FAQS[selected].a}</p>
+                        {FAQS[selected].a.split("\n\n").map((para, i) => (
+                            <p key={i} className="faq-answer-a">
+                                {para}
+                            </p>
+                        ))}
                     </div>
                 </div>
 

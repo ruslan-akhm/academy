@@ -814,6 +814,9 @@
     font-size: 0.9rem;
     line-height: 1.8;
 }
+.faq-answer-a + .faq-answer-a {
+    margin-top: 0.85rem;
+}
 .faq-mobile {
     display: none;
     flex-direction: column;
