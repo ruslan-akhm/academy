@@ -7,7 +7,7 @@ const FAQS = [
     },
     {
         q: "What age range is this designed for?",
-        a: "Ages 10–14 is the sweet spot. Young enough that these habits shape how they think; old enough to engage seriously with real tools. We group kids thoughtfully to keep sessions engaging for everyone.",
+        a: "For now we focus on ages 10–14. Young enough that these habits shape how they think; old enough to engage seriously with real tools. We group kids thoughtfully to keep sessions engaging for everyone. \n However, if your child is outside this range but you think they'd thrive, sign them up below and we'll see if we can make it work.",
     },
     {
         q: "How are classes structured?",
