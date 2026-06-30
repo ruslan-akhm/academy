@@ -73,6 +73,23 @@ export default function EnrolSection() {
                             <div className="success-icon">🎉</div>
                             <h3>You're on the list!</h3>
                             <p>We'll be in touch with details soon.</p>
+                            <button
+                                className="btn-ghost"
+                                style={{ marginTop: "1.5rem" }}
+                                onClick={() =>
+                                    setFormState({
+                                        name: "",
+                                        email: "",
+                                        childAge: "",
+                                        classFormat: "",
+                                        submitted: false,
+                                        error: null,
+                                        loading: false,
+                                    })
+                                }
+                            >
+                                Reserve another spot
+                            </button>
                         </div>
                     ) : (
                         <form className="enrol-form" onSubmit={handleSubmit}>

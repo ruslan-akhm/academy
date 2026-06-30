@@ -229,6 +229,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     transition: border-color 0.2s, background 0.2s;
+    cursor: pointer;
 }
 .btn-ghost:hover {
     border-color: rgba(0, 113, 227, 0.5);
