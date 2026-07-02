@@ -10,9 +10,7 @@ export default function TeacherSection() {
                 </h2>
                 <div className="teacher-inner">
                     <div className="teacher-photo">
-                        <div className="teacher-photo-placeholder">
-                            <span className="teacher-photo-icon">👤</span>
-                        </div>
+                        <img src="/teacher.jpg" alt="Ruslan" className="teacher-photo-img" />
                     </div>
                     <div className="teacher-content">
                         <p className="teacher-intro">
