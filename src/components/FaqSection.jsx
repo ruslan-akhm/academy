@@ -56,7 +56,7 @@ export default function FaqSection() {
                 <h2 className="section-h2">
                     Everything you
                     <br />
-                    <span className="amber">need to know.</span>
+                    <span className="cyan">need to know.</span>
                 </h2>
 
                 {/* Desktop: split panel */}
