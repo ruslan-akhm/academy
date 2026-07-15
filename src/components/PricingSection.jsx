@@ -48,6 +48,10 @@ export default function PricingSection() {
                                 <span className="check">✓</span> Project review
                                 &amp; feedback
                             </li>
+                            <li>
+                                <span className="check">✓</span> 3 months-long -
+                                full term
+                            </li>
                         </ul>
                     </div>
                 </div>
