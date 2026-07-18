@@ -1210,6 +1210,16 @@
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+    .pricing-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .pricing-card-right {
+        border-left: none;
+        border-top: 1px solid var(--card-border);
+        padding-left: 0;
+        padding-top: 2rem;
+    }
 }
 @media (max-width: 600px) {
     .nav-cta {
@@ -1253,6 +1263,17 @@
     }
     .how-step {
         padding: 1rem;
+    }
+    .pricing-section {
+        padding: 5rem 1.25rem;
+    }
+    .pricing-card {
+        padding: 1.75rem;
+    }
+    .pricing-total {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
     }
     .enrol,
     .enrol-inner,
