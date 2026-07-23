@@ -36,7 +36,7 @@ const COURSES = [
         tag: "Module 02",
         title: "Engineering with AI — How Professionals Build",
         description:
-            "The same workflow used at Google, Shopify, and startups worldwide — adapted for curious 10–14 year olds ready to think like engineers.",
+            "The same workflow used at Google, Shopify, and startups worldwide — adapted for curious young minds that are ready to think like engineers.",
         outcomes: [
             "Write, debug, and improve real code with AI",
             "Understand what software engineers actually do",

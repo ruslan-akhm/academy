@@ -16,11 +16,11 @@ export default function PricingSection() {
                         <div className="pricing-badge">Cohort 1 Sale</div>
                         <div className="pricing-prices">
                             <span className="pricing-original">$299</span>
-                            <span className="pricing-sale">$199</span>
+                            <span className="pricing-sale">$99</span>
                             <span className="pricing-period">/ month</span>
                         </div>
                         <p className="pricing-saving">
-                            You save $100/month — locked in for the full cohort.
+                            You save $200/month — locked in for the full cohort.
                         </p>
                         <a href="#enrol" className="pricing-cta">
                             Claim your spot

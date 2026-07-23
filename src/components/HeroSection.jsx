@@ -48,15 +48,15 @@ export default function HeroSection() {
                     </div>
                     <h1 className="hero-h1">
                         Give your child a<br />
-                        <span className="hero-accent">10-year head start</span>
+                        <span className="hero-accent">5-year head start</span>
                         <br />
                         in tech.
                     </h1>
                     <p className="hero-sub">
                         Main Branch Academy is a Toronto-based tech academy that
-                        teaches early adolescents (10–14 year olds) how to think
-                        like engineers, work with AI, and build real products —
-                        before most of their peers even know these tools exist.
+                        teaches children how to think like engineers, work with
+                        AI, and build real products — before most of their peers
+                        even know these tools exist.
                     </p>
                     <div className="hero-actions">
                         <a href="#enrol" className="btn-primary">

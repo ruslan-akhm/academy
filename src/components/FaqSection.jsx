@@ -7,7 +7,7 @@ const FAQS = [
     },
     {
         q: "What age range is this designed for?",
-        a: "For now we focus on ages 10–14. Young enough that these habits shape how they think; old enough to engage seriously with real tools. We group kids thoughtfully to keep sessions engaging for everyone. \n\n However, if your child is outside this range but you think they'd thrive, sign them up below and we'll see if we can make it work.",
+        a: "We are open to ages 7+, while ideal time to study our course is 10+ years old. Young enough that these habits shape how they think; old enough to engage seriously with real tools. We group kids thoughtfully to keep sessions engaging for everyone.",
     },
     {
         q: "How are classes structured?",
